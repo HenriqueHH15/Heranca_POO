@@ -37,6 +37,11 @@ export class Conta{
         return this.#saldo;
     }
 
+    toString(){
+        return "Nº da Conta: " + this.#id +
+            "\nTitular: " + this.#titular.toString();
+    }
+
     sacar(valor){
         if(valor > 0){
             this.#saldo -= valor;
@@ -59,10 +64,5 @@ export class Conta{
             return true;
         }
         return false;
-    }
-
-    toString(){
-        return "Nº da Conta: " + this.#id +
-            "\nTitular: " + this.#titular.toString();
     }
 }
