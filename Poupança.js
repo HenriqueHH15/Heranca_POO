@@ -22,9 +22,9 @@ export class Poupança extends Conta{
     }
 
     viraMes(){
-        if(super.saldo >= 0){
-            super.saldo = super.saldo * this.#rendimento / 100;
-        }
+        let valor = super.saldo * this.#rendimento / 100;
+        valor -= super.saldo;
+        super.depositar(valor);
     }
 
     toString(){

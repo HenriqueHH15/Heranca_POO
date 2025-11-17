@@ -89,13 +89,14 @@ export class ContaCorrente extends Conta{
     }
 
     viraMes(){
+        let valorCobrado = this.#tarifa;
         if (this.#saldoDevedor > 0.00){
-            this.#tarifa += this.#saldoDevedor * this.#juros / 100;
+            valorCobrado += this.#saldoDevedor * this.#juros / 100;
         }
-        if (!super.sacar(this.#tarifa)){
-            this.#tarifa -= super.saldo;
-            super.sacar(super.saldo);
-            this.#saldoDevedor += this.#tarifa;
+        if (!this.sacar(valorCobrado)){
+            valorCobrado -= super.saldo;
+            this.sacar(super.saldo);
+            this.#saldoDevedor += valorCobrado;
         }
     }
 
