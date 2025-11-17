@@ -23,13 +23,13 @@ export class Poupança extends Conta{
 
     viraMes(){
         let valor = super.saldo * this.#rendimento / 100;
-        valor -= super.saldo;
         super.depositar(valor);
     }
 
     toString(){
         return "Tipo: Poupança\n" + 
-        super.toString +
+        super.toString() +
+        "\nSaldo: R$" + this.saldo.toFixed(2) +
         "\nRendimento: " + this.#rendimento + "%";
     }
 }

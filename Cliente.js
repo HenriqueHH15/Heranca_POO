@@ -4,7 +4,7 @@ export class Cliente extends Pessoa{
     #pontuacaoFidelidade;
     #limiteCredito;
     #categoria; //COMUM, VIP, PCD
-    constuctor(nome, cpf, dtNascimento, pontuacaoFidelidade = 0, limiteCredito = 100.0, categoria = "COMUM"){
+    constructor(nome, cpf, dtNascimento, pontuacaoFidelidade = 0, limiteCredito = 100.0, categoria = "COMUM"){
         super(nome, cpf, dtNascimento);
         this.pontuacaoFidelidade = pontuacaoFidelidade;
         this.limiteCredito = limiteCredito;
@@ -49,8 +49,8 @@ export class Cliente extends Pessoa{
 
     toString() {
         return (super.toString() +
-            "\nPontuação Fidelidade: " + this.#pontuacaoFidelidade +
-            "\nLimite de Crédito: " + this.#limiteCredito.toFixed(2) +
-            "\nCategoria: " + this.#categoria);
+            "\n   Pontuação Fidelidade: " + this.#pontuacaoFidelidade +
+            "\n   Limite de Crédito: " + this.#limiteCredito.toFixed(2) +
+            "\n   Categoria: " + this.#categoria);
     }
 }

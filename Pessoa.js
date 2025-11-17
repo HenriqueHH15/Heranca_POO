@@ -36,8 +36,8 @@ export class Pessoa {
     }
 
     toString() {
-        return ("\nNome: " + this.#nome +
-        "\nCPF: " + this.#cpf +
-        "\nNascimento: " + this.#dtNascimento);
+        return ("\n   Nome: " + this.#nome +
+        "\n   CPF: " + this.#cpf +
+        "\n   Nascimento: " + this.#dtNascimento);
     } 
 }

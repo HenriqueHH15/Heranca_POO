@@ -102,7 +102,7 @@ export class ContaCorrente extends Conta{
 
     toString(){
         return "Tipo: Conta Corrente\n" +
-                super.toString +
+                super.toString() +
                "\nSaldo: R$" + this.saldo.toFixed(2) +
                "\nTarifa: R$" + this.#tarifa.toFixed(2) +
                "\nLimite de Crédito: R$" + this.#limiteCredito.toFixed(2) +
