@@ -24,13 +24,17 @@ var vetContasBanco = [conta1, conta2, conta3, conta4, conta5, conta6];
 });
 console.log(vetContasBanco);*/
 
+for(let objConta of vetContasBanco){
+    console.log (objConta.toString());
+}
+/*
 console.log(vetContasBanco[0].toString());
 console.log(vetContasBanco[1].toString());
 console.log(vetContasBanco[2].toString());
 console.log(vetContasBanco[3].toString());
 console.log(vetContasBanco[4].toString());
 console.log(vetContasBanco[5].toString());
-
+*/
 conta1.viraMes();
 console.log("Saldo após virar o mês: " + conta1.saldo);
 conta2.viraMes();
@@ -57,3 +61,7 @@ for(let i = 0; i < vetContasBanco.length; i++){
         console.log(vetContasBanco[i].toString());
     }
 }
+
+conta1.transferir(200.00, conta2);
+
+console.log(conta1, conta2);
